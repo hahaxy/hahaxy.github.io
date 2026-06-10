@@ -4,23 +4,135 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vansiora Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --text: #202124;
+      --muted: #5f6368;
+      --border: #dadce0;
+      --surface: #ffffff;
+      --accent: #1a73e8;
+    }
+
+    body {
+      margin: 0;
+      background: var(--surface);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      max-width: 820px;
+      margin: 48px auto;
+      padding: 0 24px 64px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+
+    h2 {
+      margin: 32px 0 8px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 1.2rem;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    ul {
+      margin: 12px 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 4px 0;
+    }
+
+    code {
+      padding: 2px 5px;
+      border-radius: 4px;
+      background: #f1f3f4;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 0.94em;
+    }
+
+    .updated {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+  </style>
 </head>
 <body>
-  <main style="max-width: 760px; margin: 48px auto; padding: 0 20px; font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif; line-height: 1.65;">
+  <main>
     <h1>Vansiora Privacy Policy</h1>
-    <p><strong>Effective date:</strong> June 10, 2026</p>
+    <p class="updated">Last updated: 2026-06-10</p>
 
-    <p>Vansiora is a local browser extension for formatting data, generating passwords, and performing encoding, hashing, and encryption tasks.</p>
+    <p>Vansiora is a local browser extension for structured data formatting and viewing, password generation, encoding, hashing, signing, key derivation, and encryption utilities.</p>
 
-    <p>Vansiora does not collect, sell, transfer, or share user data with third parties. All formatting, password generation, encoding, hashing, and encryption operations are performed locally in the user's browser.</p>
+    <h2>Single Purpose</h2>
+    <p>Vansiora provides local browser tools that help users format and inspect JSON, XML, YAML, and TOML, generate passwords, and run common text encoding, hashing, HMAC, PBKDF2, and AES-GCM workflows.</p>
 
-    <p>The extension may read the visible content of the current page only to detect raw JSON or structured data and offer to open it in Vansiora. This content is processed locally and is not sent to any external server.</p>
+    <h2>Data Processing</h2>
+    <p>Vansiora processes user input locally in the browser. JSON, XML, YAML, TOML, generated passwords, password settings, encryption keys, plaintext, ciphertext, encoded text, hash inputs, HMAC inputs, PBKDF2 inputs, and AES-GCM inputs are not sent to a server by Vansiora.</p>
+    <p>Vansiora does not operate a remote processing service for user input. The extension uses bundled extension code and browser APIs to perform parsing, formatting, password generation, hashing, signing, key derivation, and encryption workflows on the user's device.</p>
+    <p>Vansiora uses user data only to provide or improve its single purpose: local browser tools for structured data viewing, password generation, and encoding, hashing, key derivation, and encryption workflows.</p>
 
-    <p>Vansiora may store formatting history and language preferences locally on the user's device using browser storage. This data remains on the user's device and can be cleared by the user.</p>
+    <h2>Local Storage</h2>
+    <p>Vansiora may store formatting history, language preference, and workspace convenience data locally in the browser through <code>localStorage</code> and IndexedDB. This data remains on the user's device and is used only to provide local history, language selection, and convenience features.</p>
+    <p>Vansiora does not use browser local storage for advertising, analytics, user profiling, or sale of data.</p>
 
-    <p>Vansiora does not use remote code, analytics, advertising, tracking, or third-party data collection services.</p>
+    <h2>Web Page Access</h2>
+    <p>Vansiora includes a content script that can run on web pages to detect raw JSON or XML documents and provide a structured viewer or an option to open the content in the extension. The content script runs locally in the browser and does not transmit detected page content to Vansiora servers.</p>
+    <p>The content script is designed to run only in the top-level frame and avoids replacing ordinary web pages. It acts only when the page appears to be raw JSON or XML data.</p>
+    <p>When necessary for XML or feed detection, the content script may read the current page content or make a same-origin request for the current page URL. This is used only to detect and display raw structured data locally. Vansiora does not send this page content to Vansiora-controlled servers.</p>
+    <p>Small page payloads may be transferred to the extension page through the browser URL hash. Larger payloads may be temporarily held in the extension background context so the extension page can read them. This transfer is local to the user's browser and is not sent to a Vansiora server.</p>
 
-    <p>Contact: vipbcw@gmail.com</p>
+    <h2>Data Collection</h2>
+    <p>Vansiora does not collect or transmit the following data to Vansiora servers:</p>
+    <ul>
+      <li>Personally identifiable information</li>
+      <li>Health information</li>
+      <li>Financial or payment information</li>
+      <li>Authentication information</li>
+      <li>Personal communications</li>
+      <li>Location</li>
+      <li>Web history</li>
+      <li>User activity for analytics or advertising</li>
+      <li>Website content for remote processing</li>
+    </ul>
+    <p>Vansiora does not use user data for advertising, analytics, behavioral tracking, creditworthiness, lending, or any purpose unrelated to the extension's single purpose.</p>
+
+    <h2>Data Sharing</h2>
+    <p>Vansiora does not sell, share, or transfer user data to third parties.</p>
+    <p>Vansiora does not transfer user data to advertising platforms, data brokers, information resellers, analytics providers, or other third parties. Vansiora does not operate a server-side support, analytics, or review system that allows Vansiora personnel or third parties to read user data stored locally in the browser.</p>
+
+    <h2>Limited Use</h2>
+    <p>Vansiora's use and transfer of user data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+    <p>Vansiora does not use or transfer user data for personalized advertising, creditworthiness, lending, unrelated product purposes, or any purpose outside the extension's single purpose. Vansiora does not sell user data.</p>
+    <p>Vansiora does not collect or use web browsing activity except to the limited extent required for the user-facing raw JSON/XML detection feature described in the Chrome Web Store listing and extension interface. That page access is used locally to detect and display raw structured data and is not used for analytics, advertising, profiling, or unrelated browsing-history collection.</p>
+
+    <h2>Analytics And Tracking</h2>
+    <p>Vansiora does not include analytics, advertising trackers, behavioral tracking, affiliate tracking, or user profiling.</p>
+
+    <h2>Remote Code</h2>
+    <p>Vansiora does not load or execute remote code. Extension code is bundled with the published package.</p>
+
+    <h2>Permissions</h2>
+    <p>Vansiora does not declare extension <code>permissions</code> or <code>host_permissions</code>. Its content script is matched on web pages only to detect raw JSON/XML documents locally.</p>
+    <p>Vansiora exposes only the extension page and the 48px icon as web-accessible resources. These resources are used to open the local extension UI and display the inline viewer icon.</p>
+
+    <h2>Trader Status</h2>
+    <p>The current free local release is operated as a non-trader release. If Vansiora later adds paid licenses, subscriptions, commercial support, business-to-business distribution, or other trade/business/professional use, the Chrome Web Store trader status and related public disclosures should be updated before that commercial release.</p>
+
+    <h2>Contact</h2>
+    <p>For privacy questions, contact the extension publisher through the support contact configured in the Chrome Web Store developer account.</p>
   </main>
 </body>
 </html>
